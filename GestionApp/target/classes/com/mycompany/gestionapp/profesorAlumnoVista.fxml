@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="664.0" prefWidth="1350.0" styleClass="fondoProfesor" stylesheets="@../../../estilos/primary.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestionapp.ProfesorAlumnoController">
+   <children>
+      <GridPane alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="934.0">
+         <VBox.margin>
+            <Insets right="10.0" top="10.0" />
+         </VBox.margin>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="70.0" prefHeight="100.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../../imagenes/logo-cesur.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelNombreProfesor" alignment="CENTER" contentDisplay="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="NOMBRE PROFESOR" textFill="#638ceb" underline="true">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="347.0" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="AREA ADMINISTRATIVA DE ALUMNOS" underline="true" GridPane.columnIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <ImageView fitHeight="46.0" fitWidth="55.0" onMouseClicked="#logOutProfesor" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../../../imagenes/logout.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </ImageView>
+            <ImageView fx:id="imgEmpresa" fitHeight="46.0" fitWidth="55.0" onMouseClicked="#irAdministracionEmpresas" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="90.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../../../imagenes/empresa.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgActividades" fitHeight="46.0" fitWidth="55.0" onMouseClicked="#irActividades" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../../../imagenes/portapapeles.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets right="160.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="473.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" maxWidth="465.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="276.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="350.0" minWidth="10.0" prefWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="10.0" prefHeight="46.0" prefWidth="334.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="NOMBRE">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="txtNombre" prefHeight="26.0" prefWidth="213.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" GridPane.columnIndex="1">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="APELLIDOS" />
+                  <TextField fx:id="txtApellidos" prefHeight="26.0" prefWidth="210.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="46.0" prefWidth="172.0" GridPane.columnIndex="2">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="DNI" />
+                  <TextField fx:id="txtDNI" prefHeight="26.0" prefWidth="221.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="RIGHT" hgap="10.0" prefHeight="46.0" prefWidth="317.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <children>
+                  <Label styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="FECHA NACIMIENTO" />
+                  <DatePicker fx:id="datePickerNacimiento" prefHeight="25.0" prefWidth="146.0">
+                     <FlowPane.margin>
+                        <Insets right="20.0" />
+                     </FlowPane.margin>
+                  </DatePicker>
+               </children>
+            </FlowPane>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane alignment="CENTER" layoutX="10.0" layoutY="91.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="473.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" maxWidth="465.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="276.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="350.0" minWidth="10.0" prefWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="10.0" prefHeight="46.0" prefWidth="334.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="EMAIL">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="txtEmail" prefHeight="26.0" prefWidth="250.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" GridPane.columnIndex="1">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="TELEFONO" />
+                  <TextField fx:id="txtTelefono" prefHeight="25.0" prefWidth="217.0" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="46.0" prefWidth="172.0" GridPane.columnIndex="2">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="EMPRESA" />
+                  <ComboBox fx:id="comboEmpresa" prefWidth="150.0" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="RIGHT" hgap="10.0" prefHeight="46.0" prefWidth="317.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <children>
+                  <Label styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="TUTOR" />
+                  <ComboBox fx:id="comboProfesor" prefWidth="150.0" />
+               </children>
+            </FlowPane>
+         </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane alignment="CENTER" layoutX="10.0" layoutY="187.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="473.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" maxWidth="465.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="276.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="350.0" minWidth="10.0" prefWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="10.0" prefHeight="46.0" prefWidth="334.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="HORAS DUALES">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="txtHorasDuales" prefHeight="26.0" prefWidth="175.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" GridPane.columnIndex="1">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="HORAS FCT" />
+                  <TextField fx:id="txtHorasFCT" prefHeight="26.0" prefWidth="206.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="172.0" GridPane.columnIndex="2">
+               <children>
+                  <Label styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="OBSERVACIONES" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="BOTTOM_LEFT" columnHalignment="RIGHT" hgap="10.0" prefHeight="46.0" prefWidth="317.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <children>
+                  <TextArea fx:id="txtObservaciones" prefHeight="99.0" prefWidth="374.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin></TextArea>
+                  <HBox alignment="CENTER_LEFT" />
+               </children>
+               <GridPane.margin>
+                  <Insets right="100.0" />
+               </GridPane.margin>
+            </FlowPane>
+         </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane alignment="CENTER" layoutX="10.0" layoutY="120.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="473.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" maxWidth="465.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="276.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="350.0" minWidth="10.0" prefWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="10.0" prefHeight="46.0" prefWidth="334.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" styleClass="etiquetas" stylesheets="@../../../estilos/primary.css" text="CLAVE">
+                     <FlowPane.margin>
+                        <Insets left="30.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="txtClave" prefHeight="26.0" prefWidth="244.0" styleClass="campoTexto" stylesheets="@../../../estilos/primary.css" />
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" GridPane.columnIndex="1" />
+            <FlowPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="46.0" prefWidth="172.0" GridPane.columnIndex="2" />
+            <FlowPane alignment="CENTER_LEFT" columnHalignment="RIGHT" hgap="10.0" prefHeight="46.0" prefWidth="317.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </GridPane>
+      <HBox alignment="CENTER">
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onMouseClicked="#agregarAlumno" prefHeight="32.0" prefWidth="383.0" styleClass="botonInsertarAlumno" stylesheets="@../../../estilos/primary.css" text="AGREGAR ALUMNO" />
+         </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+         <children>
+            <TableView fx:id="tablaAlumnos" centerShape="false" prefHeight="200.0" prefWidth="200.0" styleClass="etiquetasTablas" stylesheets="@../../../estilos/primary.css">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="39.0" text="ID" />
+                <TableColumn fx:id="colDNI" prefWidth="96.0" text="DNI" />
+                  <TableColumn fx:id="colNombre" prefWidth="112.0" text="NOMBRE" />
+                  <TableColumn fx:id="colApellidos" prefWidth="111.0" text="APELLIDOS" />
+                  <TableColumn fx:id="colNacimiento" prefWidth="133.0" text="NACIMIENTO" />
+                  <TableColumn fx:id="colTelefono" minWidth="8.0" prefWidth="92.0" text="TELEFONO" />
+                  <TableColumn fx:id="colEmail" prefWidth="141.0" text="EMAIL" />
+                  <TableColumn fx:id="colClave" minWidth="0.0" prefWidth="69.0" text="CLAVE" />
+                  <TableColumn fx:id="colHorasDual" prefWidth="86.0" text="HORAS DUAL" />
+                  <TableColumn fx:id="colHorasFCT" prefWidth="70.0" text="HORAS FCT" />
+                  <TableColumn fx:id="colEmpresa" text="EMPRESA" />
+                  <TableColumn fx:id="colProfesor" prefWidth="74.0" text="PROFESOR" />
+                  <TableColumn fx:id="colObservaciones" prefWidth="186.0" text="OBSERVACIONES" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,5 @@
+ID,ALUMNO,NOMBRE,HORAS,FECHA,OBSERVACIONES
+1,jesus,Proyecto grupal,2,2021-11-23 00:00:00.0,Entregar antes de la fecha máxima.
+3,jesus,Realizar views en SnowFlake,8,2021-11-20 00:00:00.0,Realizar Views para que la empresa consulte las tablas mas rapido.
+6,jesus,nueva,8,2021-11-20 00:00:00.0,Nueva actividad
+12,jesus,Prueba,8,2021-11-20 00:00:00.0,Una prueba
